@@ -16,7 +16,7 @@ using namespace std;
 //Salva o JSON em um arquivo nomeado como $pid.txt
 void saveFile(string json, int pid){
 	//Inicializa o nome do arquivo
-	string path = to_string(pid) + ".txt";
+	string path = "json/" + to_string(pid) + ".txt";
 
 	//Inicializa o arquivo
     ofstream out(path.c_str());
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 		FD_ZERO(&readfds);
 		FD_SET(fileno(stdin), &readfds);
 		
-		printf("Digite o PID desejado (Digite -1 para parar): ");
+		printf("Digite o PID desejado (Digite 0 para parar): ");
 		fflush(stdout);
 
 		//Verifica se o usuário digitou algo
@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
 			}
 
 			//Verifica se o usuário digitou -1 (Comando para sair do programa)
-			if(atoi(buf) != -1)
+			if(atoi(buf) == 0)
 				break;
 
 			//Verifica se a informação digitada pelo usuário é um processo válido
