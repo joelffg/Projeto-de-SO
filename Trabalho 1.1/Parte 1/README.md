@@ -1,4 +1,4 @@
-#Trabalho 1.1 - Parte 1
+#Parte 1: Fork Bomb
 
 ####Para compilar use:
 g++ Fork_bomb.cpp -o fork_bomb
