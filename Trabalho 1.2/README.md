@@ -20,7 +20,11 @@ g++ -std=c++11 gpioMonitor.cpp -o gpioMonitor
 g++ -std=c++11 memfill.cpp -o memfill
 
 ####Para usar:
+Executar como super user
+
 ./gpioMonitor
+
+Em outra janela do bash:
 
 ./memfill
 
