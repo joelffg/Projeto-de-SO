@@ -1,11 +1,11 @@
 # ProjetoSO
 
-###Descrição
+### Descrição
 Tarefas solicitadas pelos professores: Prof. Dr. Edgard de Faria Corrêa & Prof. Dr. Ivanovitch Medeiros Dantas da Silva, na disciplina: DIM0615 - Projeto de Sistemas Operacionais.
 	
-###Autores:
+### Autores:
 * Joel Felipe - joelfelipe07@gmail.com
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
-###Disponível em: 
+### Disponível em: 
 https://github.com/joelffg/ProjetoSO
