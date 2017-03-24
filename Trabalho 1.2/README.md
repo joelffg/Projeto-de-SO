@@ -14,6 +14,16 @@ percentual de uso desse(s) recurso(s):
 * Quando o recurso tiver ultrapassado os 75% um "botão do pânico" deve ser acionado e o processo que estiver causando o aumento do uso do recurso deverá ser terminado.
 * Ao ser acionado o botão do pânico todos os LEDs ficarão apagados por "X" segundos e depois segue a lógica citada.
   
+####Para compilar use:
+g++ -std=c++11 gpioMonitor.cpp -o gpioMonitor
+
+g++ -std=c++11 memfill.cpp -o memfill
+
+####Para usar:
+./gpioMonitor
+
+./memfill
+
 ###Autores:
 * Joel Felipe - joelfelipe07@gmail.com
 * Hugo Oliveira - hugotholiveira@hotmail.com
