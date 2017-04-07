@@ -15,23 +15,22 @@ percentual de uso desse(s) recurso(s):
 * Ao ser acionado o botão do pânico todos os LEDs ficarão apagados por "X" segundos e depois segue a lógica citada.
   
 #### Para compilar use:
-g++ -std=c++11 gpioMonitor.cpp -o gpioMonitor
-
-g++ -std=c++11 memfill.cpp -o memfill
-
+```
+$ g++ -std=c++11 gpioMonitor.cpp -o gpioMonitor
+$ g++ -std=c++11 memfill.cpp -o memfill
+```
 #### Para usar:
 Executar como super user
-
-./gpioMonitor
-
+```
+$ ./gpioMonitor
+```
 Em outra janela do bash:
-
-./memfill
-
+```
+$ ./memfill
+```
 ### Autores:
 * Joel Felipe - joelfelipe07@gmail.com
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
 ### Disponível em: 
 https://github.com/joelffg/ProjetoSO/tree/master/Trabalho%201.2
-
