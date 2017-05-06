@@ -23,4 +23,4 @@ No trabalho anterior foram explorados GPIO e ADC da BeagleBoneBlack, assim como 
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
 ### Disponível em: 
-https://github.com/joelffg/ProjetoSO/tree/master/Trabalho%201.3
+https://github.com/joelffg/ProjetoSO/tree/master/Trabalho%202.1
