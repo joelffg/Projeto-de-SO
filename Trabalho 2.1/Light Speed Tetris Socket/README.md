@@ -1,5 +1,5 @@
 # Light Speed Tetris Socket:video_game: :rocket: :zap: :flashlight: :video_game:
-![](https://github.com/joelffg/ProjetoSO/blob/master/Trabalho%201.3/Light%20Speed%20Tetris%20Socket/img/tetris.png?raw=true)
+![](https://github.com/joelffg/ProjetoSO/blob/master/Trabalho%202.1/Light%20Speed%20Tetris%20Socket/img/tetris.png?raw=true)
 
 ### Descrição
 Tetris (baseado em [Tetris](https://github.com/fanux/tetris)) jogado na [BeagleBoneBlack](https://beagleboard.org/black), utilizando-se de alguns componentes eletrônicos como sendo os controladores do jogo:
@@ -33,4 +33,4 @@ $ python cliente.py
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
 ### Disponível em: 
-https://github.com/joelffg/ProjetoSO/blob/master/Trabalho%201.3/Light%20Speed%20Tetris%20Socket/
+https://github.com/joelffg/ProjetoSO/blob/master/Trabalho%202.1/Light%20Speed%20Tetris%20Socket/
