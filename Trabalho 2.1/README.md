@@ -1,9 +1,9 @@
 # Trabalho 2.1 - Socket
 
-### Objetivo
+### Objetivo:
 Explorar aspectos teóricos e práticos sobre sockets.
 
-### Objetivo
+### Descrição:
 No trabalho anterior foram explorados GPIO e ADC da BeagleBoneBlack, assim como a utilização de threads e prioridades. Um joystick foi implementado para um jogo que era executado no terminal da própria BBB. A ideia agora é adicionar novas características, visando a utilização da comunicação em socket.
 
 ### Requisitos:
@@ -15,7 +15,7 @@ No trabalho anterior foram explorados GPIO e ADC da BeagleBoneBlack, assim como 
 * A comunicação entre o cliente e servidor será realizada via socket. 
 3. Programas:
 * Cliente e servidor deverão ser implementados em linguagens diferentes
-3. Threads:
+4. Threads:
 * Threads separadas devem ficar responsáveis pelo gerenciamento da comunicação socket em ambos os lados (cliente e servidor).
 
 ### Autores:
