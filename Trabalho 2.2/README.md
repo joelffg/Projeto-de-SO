@@ -27,4 +27,4 @@ $ ./trab2-2
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
 ### Disponível em: 
-https://github.com/joelffg/ProjetoSO/tree/master/Trabalho%202.1
+https://github.com/joelffg/ProjetoSO/tree/master/Trabalho%202.2
