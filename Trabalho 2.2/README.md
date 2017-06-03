@@ -13,6 +13,15 @@ Desenvolver um sistema de visualização de memória para o S.O.
 * Swapping
 * (Nº de) faltas de páginas por process
 
+#### Para compilar use:
+```
+$ g++ -std=c++11 trab2-2.cpp.cpp -o trab2-2
+```
+#### Para usar:
+```
+$ ./trab2-2
+```
+
 ### Autores:
 * Joel Felipe - joelfelipe07@gmail.com
 * Hugo Oliveira - hugotholiveira@hotmail.com
