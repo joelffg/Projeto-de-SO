@@ -7,12 +7,13 @@ typedef struct process{
 	int mem;
 	int min_flt;
 	int maj_flt;
+	int swap;
 } Process;
 
 //Retorna uma lista com todos os processos abertos no sistema
 list<Process> getProcessosAbertos(){
 
-	//InicializaÃ§Ã£o das variÃ¡veis
+	//Inicialização das variáveis
 	FILE *fp;
 	char path[1035];
 	char *aux;
@@ -21,7 +22,7 @@ list<Process> getProcessosAbertos(){
 	//Comando que pega todos os pid, e page falts do sistema
 	string comando = "ps -eo pid,min_flt,maj_flt --no-header | head --lines=-2";
 
-	//O comando Ã© executado no terminal e a saÃ­da Ã© armazenada em um arquivo
+	//O comando é executado no terminal e a saída é armazenada em um arquivo
 	fp = popen(comando.c_str(), "r");
 
 	//Verifica se o comando foi executado
@@ -30,7 +31,7 @@ list<Process> getProcessosAbertos(){
 		exit(1);
 	}
 
-	//LÃª a saÃ­da linha por linha
+	//Lê a saída linha por linha
 	while (fgets(path, sizeof(path)-1, fp) != NULL) {
 		aux = strtok(path," ");
 		Process p;
@@ -46,7 +47,7 @@ list<Process> getProcessosAbertos(){
 		//Comando que pega o arquivo status do pid passado
 		string comando = "cat /proc/" + to_string(p.pid) + "/status | head -18 | tail -1 | awk '{print $2}'";
 
-		//O comando Ã© executado no terminal e a saÃ­da Ã© armazenada em um arquivo
+		//O comando é executado no terminal e a saída é armazenada em um arquivo
 		f = popen(comando.c_str(), "r");
 
 		//Verifica se o comando foi executado
@@ -55,9 +56,27 @@ list<Process> getProcessosAbertos(){
 			exit(1);
 		}
 
-		//LÃª a saÃ­da linha por linha
+		//Lê a saída linha por linha
 		while (fgets(path2, sizeof(path2)-1, f) != NULL)
 			p.mem = atoi(path2);
+		
+		pclose(f);
+
+		//Comando que pega o arquivo status do pid passado
+		comando = "cat /proc/" + to_string(p.pid) + "/status | head -32 | tail -1 | awk '{print $2}'";
+
+		//O comando é executado no terminal e a saída é armazenada em um arquivo
+		f = popen(comando.c_str(), "r");
+
+		//Verifica se o comando foi executado
+		if (f == NULL) {
+			printf("Failed to run command\n" );
+			exit(1);
+		}
+
+		//Lê a saída linha por linha
+		while (fgets(path2, sizeof(path2)-1, f) != NULL)
+			p.swap = atoi(path2);
 		
 		pclose(f);
 		
@@ -73,21 +92,21 @@ list<Process> getProcessosAbertos(){
 
 void readProcess(list<Process> process){
 	for(list<Process>::iterator it = process.begin(); it != process.end(); it++){
-		printf("pid: %d\n\tmin_flt: %d\n\tmaj_flt: %d\n\tmem: %d\n", it->pid, it->min_flt, it->maj_flt, it->mem);
+		printf("pid: %d\n\tmin_flt: %d\n\tmaj_flt: %d\n\tmem: %d\n\tswap: %d\n", it->pid, it->min_flt, it->maj_flt, it->mem, it->swap);
 	}
 }
 
 int main(int argc, char *argv[]){
-	printf("A quantidade total da memÃ³ria principal Ã© de: ");
+	printf("A quantidade total da memória principal é de: ");
 	fflush(stdout);
 	system("cat /proc/meminfo | head -1 | awk '{print $2}'");
-	printf("A quantidade total da memÃ³ria cache Ã© de: ");
+	printf("A quantidade total da memória cache é de: ");
 	fflush(stdout);
 	system("cat /proc/meminfo | head -5 | tail -1 | awk '{print $2}'");
-	printf("A quantidade total de swapping Ã© de: ");
+	printf("A quantidade total de swapping é de: ");
 	fflush(stdout);
 	system("cat /proc/meminfo | head -15 | tail -1 | awk '{print $2}'");
-	printf("As informaÃ§Ãµes por processo estÃ£o detalhadas abaixo:\n");
+	printf("As informações por processo estão detalhadas abaixo:\n");
 	list<Process> processos = getProcessosAbertos();
 	readProcess(processos);
 }
