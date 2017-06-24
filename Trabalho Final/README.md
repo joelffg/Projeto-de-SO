@@ -72,5 +72,12 @@ READ BINARY
 * Joel Felipe - joelfelipe07@gmail.com
 * Hugo Oliveira - hugotholiveira@hotmail.com
 
+### Referências:
+* http://www.pudn.com/Download/item/id/417462.html
+* https://github.com/acshk/acsccid
+* https://stackoverflow.com/questions/27800295/programming-acr122t-e2-in-linux
+* https://manned.org/CT_init#head4
+* https://github.com/larskanis/ctapi-cyberjack
+
 ### Disponível em: 
 https://github.com/joelffg/ProjetoSO/tree/master/Trabalho Final
